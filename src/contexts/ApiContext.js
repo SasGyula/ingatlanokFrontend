@@ -32,7 +32,7 @@ export const ApiProvider = ({ children }) => {
     //useEffect hook segitségével
     useEffect(()=>{
         {getAdat("/api/ingatlanok", setIngatlanLista)};
-        {getAdat("/api/categories", setKatLista)};
+        {getAdat("/api/kategoriak", setKatLista)};
         },[])
     return <ApiContext.Provider value={{ingatlanLista, katLista, postAdat, deleteAdat}}>
         {children}
